@@ -1,0 +1,27 @@
+<ion-content padding class="bg-main-page">
+  <ion-row>
+    <ion-col style="height: fit-content;">
+      <div>
+        <a class="btn-back" (click)="goback()">
+          <img src="../../../assets/img/btn/btn-back.png" alt="">
+        </a>
+      </div>
+    </ion-col>
+
+    <ion-col>
+    </ion-col>
+  
+    <ion-col>
+    </ion-col>
+  </ion-row>
+  <div id="container">
+    <ion-row style="margin-top: 10%;">
+      <ion-col>
+        <a class="btn thai" (click)="getTopic('thaiAlphabet')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+      <ion-col>
+        <a class="btn eng" (click)="getTopic('englishAlphabet')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

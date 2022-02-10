@@ -1,0 +1,41 @@
+<ion-content padding class="bg-choose-checkpoint">
+  <ion-row>
+    <ion-col style="height: fit-content;">
+      <div>
+        <a class="btn-back" (click)="goback()">
+          <img src="../../../assets/img/btn/btn-back.png" alt="">
+        </a>
+      </div>
+    </ion-col>
+
+    <ion-col>
+    </ion-col>
+  
+    <ion-col>
+    </ion-col>
+  </ion-row>
+
+  <div id="container" style="margin-top: 4%;">
+    <ion-slides>
+      <ion-slide *ngFor="let n of dataString; let i = index;">
+        <div class="center">
+          <ion-row style="margin-left: 4%;">
+            <ion-col *ngFor="let m of data_show_length; let j = index;" style="padding-left: 56px; padding-right: 56px;">
+              <div *ngIf="j < 3;">
+                <div class="btn passs" (click)="getDataStringValue(dataString[i].data[6-(6-j)])" (click)="playKnowledge(dataString[i].data[6-(6-j)])"><img class="img-a" src="{{ dataString[i].data[j].alphabet }}" alt="" srcset=""></div>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div style="padding: 20px;"></div>
+          <ion-row style="margin-left: 4%;">
+            <ion-col *ngFor="let m of data_show_length; let j = index;" style="padding-left: 56px; padding-right: 56px;">
+              <div *ngIf="j < 3">
+                <div class="btn pass" (click)="getDataStringValue(dataString[i].data[j+3])" (click)="playKnowledge(dataString[i].data[j+3])"><img class="img-a" src="{{ dataString[i].data[j+3].alphabet }}" alt="" srcset=""></div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

@@ -1,0 +1,63 @@
+.bg-main-page {
+  --background: url(../../../assets/img/background/page3-th-en.png) 0 0/100% 100% no-repeat;
+
+  #container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+}
+
+
+.btn {
+    height: 140px;
+    width: 170px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.eng {
+  margin-top: 1%;
+  margin-right: 23%;
+}
+
+.thai {
+  margin-top: 1%;
+  margin-left: 19%;
+}
+
+.btn-back {
+  height: 100%;
+  width: 26%;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: none;
+  cursor: pointer;
+}

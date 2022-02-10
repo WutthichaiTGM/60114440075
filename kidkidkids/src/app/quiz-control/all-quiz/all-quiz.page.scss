@@ -1,0 +1,79 @@
+.bg-all-quiz {
+  --background: url(../../../assets/img/background/bg.png) 0 0/100% 100% no-repeat;
+  #container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  height: 100%;
+  width: 41%;
+  border-radius: 10%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+.img-btn {
+  margin-left: 50%;
+}
+
+.btn-drag {
+  margin-left: 37%;
+}
+
+.btn-listen {
+  margin-left: 17%;
+}
+
+.btn-sort {
+  margin-left: 37%;
+}
+
+.btn-match {
+  margin-left: 17%;
+}
+
+.back {
+  position: absolute;
+  text-align: left;
+  margin-top: -8%;
+  margin-left: 6%;
+}
+
+.btn-back {
+  width: 26%;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: none;
+  cursor: pointer;
+}

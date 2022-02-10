@@ -1,0 +1,180 @@
+.bg-choose-checkpoint {
+    --background: url(../../../../assets/img/background/bg-page-th.png) 0 0/100% 100% no-repeat;
+}
+
+.img {
+    width: 55%;
+    height: auto;
+}
+
+.img2 {
+    width: 35%;
+    height: auto;
+}
+
+.img3 {
+    width: 63%;
+    height: auto;
+}
+
+.img4 {
+    width: 65%;
+    height: auto;
+}
+
+.col-top {
+    color: black;
+    text-align: center;
+}
+
+.col-mid {
+    text-align: center;
+}
+
+.col-buttom-1 {
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.btn {
+  padding-top: 2%;
+  margin: 1%;
+  margin-left: 3%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.score {
+    padding-right: 14px;
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+}
+
+.col-mid {
+    text-align: center;
+    color: black;
+}
+
+.img-speaker {
+    width: 10%;
+    height: auto;
+}
+
+.img {
+    width: 100px;
+    height: auto;
+}
+
+.txt {
+    margin-top: 1%;
+}
+
+.ngao {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    background-color: rgb(190, 190, 190);
+    border: 3px solid lightgray;
+    font-size: 55px;
+    padding-top: 2%;
+}
+
+.img-ngao{
+    border-radius: 22px;
+    width: 120px;
+    height: 120px;
+    padding: 7px;
+}
+
+.home {
+    margin-left: 16%;
+    width: 35%;
+    height: 25%;
+    font-size: 28px;
+    background-color: lightblue;
+    border-radius: 8px;
+  }
+  
+  .replay {
+    width: 35%;
+    height: 25%;
+    font-size: 28px;
+    background-color: darkorange;
+    border-radius: 8px;
+  }
+
+  .no {
+    width: 35%;
+    height: 25%;
+    font-size: 28px;
+    background-color: limegreen;
+    border-radius: 8px;
+    font-family: 'Sanamdeklen';
+    color: white;
+  }
+  
+  .yes {
+    width: 35%;
+    height: 25%;
+    font-size: 28px;
+    background-color: mediumvioletred;
+    border-radius: 8px;
+    font-family: 'Sanamdeklen';
+    color: white;
+  }
+  
+  .img-congrate {
+    width: 50%;
+  }
+  
+  .img-fail {
+    padding-top: 19%;
+    width: 100%;
+  }
+
+  .question {
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 0.1;
+  }
+  
+  .txt-congrate {
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+    font-size: 40px;
+    color: lightpink;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .txt-fail {
+    font-family: 'Sanamdeklen';
+    font-weight: bold;
+    font-size: 40px;
+    color: lightgreen;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  #successMessage, #failMessage, #resetGame {
+    position: absolute;
+    left: 580px;
+    top: 250px;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: white;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+  }

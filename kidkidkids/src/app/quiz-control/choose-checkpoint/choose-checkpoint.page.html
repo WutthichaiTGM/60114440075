@@ -1,0 +1,55 @@
+<ion-content padding class="bg-choose-checkpoint">
+  <ion-row>
+    <ion-col>
+      <div class="back">
+        <a class="btn-back" (click)="goback()">
+          <img src="../../../assets/img/btn/btn-back.png" alt="">
+        </a>
+      </div>
+    </ion-col>
+  
+    <ion-col>
+    </ion-col>
+  
+    <ion-col style="text-align: right; padding-right: 20px;">
+      <div class="score" *ngFor="let d of dataSc">
+        <p>SCORE : {{ d.total_score }}</p>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div id="container" *ngFor="let sc of dataSc">
+    <ion-row>
+      <ion-col>
+        <a class="btn pass" (click)="gotostate('1')">1</a>
+      </ion-col>
+      <ion-col>
+        <div *ngIf="sc.score_state1 === 0; else Score1">
+          <button class="btn disable" disabled="true"><ion-icon name="lock-closed"></ion-icon></button>
+        </div>
+        <ng-template #Score1>
+          <a class="btn pass" (click)="gotostate('2')">2</a>
+        </ng-template>
+      </ion-col>
+      <ion-col>
+        <div *ngIf="sc.score_state2 === 0; else Score2">
+          <button class="btn disable" disabled="true"><ion-icon name="lock-closed"></ion-icon></button>
+        </div>
+        <ng-template #Score2>
+          <a class="btn pass" (click)="gotostate('3')">3</a>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+    <div style="padding: 30px;"></div>
+    <ion-row style="text-align: left; margin-left: 10%;">
+      <ion-col>
+        <div *ngIf="sc.score_state3 === 0; else Score3">
+          <button class="btn disable" disabled="true"><ion-icon name="lock-closed"></ion-icon></button>
+        </div>
+        <ng-template #Score3>
+          <a class="btn pass" (click)="gotostate('4')">4</a>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-content padding class="bg-all-quiz">
+  
+  <div id="container">
+    <ion-row>
+      <ion-col>
+        <div class="back">
+          <a class="btn-back" (click)="gotoAllQuiz()">
+            <img src="../../../assets/img/btn/btn-back.png" alt="">
+          </a>
+        </div>
+      </ion-col>
+  
+      <ion-col>
+      </ion-col>
+    
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row> 
+      <ion-col size="4" offset="2">  
+        <div class="center">  
+          <a class="btn" routerLink="/choose-checkpoint" (click)="getQuiz('สัตว์')"><img src="../../../assets/img/menu-learning-icns/5.png" alt=""></a> 
+        </div>  
+      </ion-col>
+      <div style="padding: 10px;"></div>  
+      <ion-col size="4">  
+        <div class="center">  
+          <a class="btn" (click)="getQuiz(topic)" routerLink="/choose-checkpoint"><img src="{{ img }}" alt=""></a>
+        </div>  
+      </ion-col>  
+    </ion-row>  
+    <ion-row>  
+      <ion-col size="4" offset="4">  
+        <div class="center">  
+          <a class="btn" (click)="getQuiz('ผลไม้')" routerLink="/choose-checkpoint"><img src="../../../assets/img/menu-learning-icns/3.png" alt=""></a>
+        </div>  
+      </ion-col>  
+    </ion-row> 
+  </div>
+</ion-content>

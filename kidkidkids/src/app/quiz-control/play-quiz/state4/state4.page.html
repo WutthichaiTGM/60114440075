@@ -1,0 +1,96 @@
+<ion-content padding class="bg-choose-checkpoint">
+  <ion-row style="height: 14%;">
+    <ion-col style="height: fit-content;">
+      <a class="btn" (click)="resetGame()"><img src="../../../../assets/img/btn/btn-home.png" alt=""></a>
+    </ion-col>
+
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+
+    <ion-col style="height: fit-content; text-align: right; padding-top: 2%; padding-left: 12%;">
+      <label for="" *ngFor="let h of heart" style="padding: 4%;">
+        <img src="{{ h.img }}" alt="" width="25px">
+      </label>
+    </ion-col> 
+
+    <ion-col style="text-align: right; height: fit-content;">
+      <p class="score">SCORE : {{ score }}</p>
+    </ion-col>
+  </ion-row>
+
+  
+  <div id="container">
+    <div style="text-align: center;">
+      <span class="question">จงลากรูปสัตว์ให้ตรงกับเสียงต่อไปนี้</span>
+    </div>
+
+    <div style="padding: 1%;"></div>
+
+    <ion-row>
+      <ion-col class="col-left">
+        <ion-row id="cardPileLeftTop" style="text-align: center;">
+        </ion-row>
+
+        <ion-row id="cardPileLeftBottom" style="text-align: center;">
+        </ion-row>
+      </ion-col>
+      
+      <ion-col class="col-shadow">
+        <div>
+          <a (click)="listenToAnimalSound()">
+            <img class="speaker" src="../../../../assets/img/icons-speaker/btn-animal-audio.png" alt="">
+          </a>
+        </div>
+        <div style="padding: 10px;"></div>
+        <ion-row id="cardSlots" style="text-align: center;">
+        </ion-row>
+      </ion-col>
+
+      
+      <ion-col class="col-right">
+        <ion-row id="cardPileRightTop" style="text-align: center;">
+        </ion-row>
+        <ion-row id="cardPileRightBottom" style="text-align: center;">
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div id="resetGame" style="text-align: center;">
+    <ion-row>
+      <ion-col style="text-align: right;"><img class="img-fail" src="../../../../assets/img/cry.png" alt=""></ion-col>
+      <ion-col style="text-align: center; margin-top: 7%;">
+        <span class="txt-congrate">แน่ใจหรือว่าต้องการเลิก?</span><br>
+        <label for="">
+          <span><button class="yes" (click)="playBgSound()" routerLink="/choose-checkpoint"><h3><strong>ใช่</strong></h3></button></span>
+          <span style="padding: 5%;"></span>
+          <span><button class="no" (click)="continueGame()"><h3><strong>ไม่</strong></h3></button></span>
+        </label>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  <div id="successMessage" style="text-align: center;">
+    <ion-row>
+      <ion-col style="text-align: right;"><img class="img-congrate" src="../../../../assets/img/congrate.png" alt=""></ion-col>
+      <ion-col style="text-align: left; margin-top: 20%;">
+        <span class="txt-congrate">สุดยอดไปเลย</span>
+        <button class="home" (click)="gotoCheckpoint()"><ion-icon name="home" style="margin-top: 6%;"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div id="failMessage" style="text-align: center;">
+    <ion-row>
+      <ion-col style="text-align: right;"><img class="img-fail" src="../../../../assets/img/cry.png" alt=""></ion-col>
+      <ion-col style="text-align: center; margin-top: 7%;">
+        <span class="txt-fail">ไม่ไหวๆ<br>ลองใหม่อีกทีนะ</span><br>
+        <label for="">
+          <span><button class="replay" (click)="drag_drop(match_sound)"><ion-icon name="reload" style="margin-top: 6%;"></ion-icon></button></span>
+          <span><button class="home" (click)="fail()"><ion-icon name="home" style="margin-top: 6%;"></ion-icon></button></span>
+        </label>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

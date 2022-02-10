@@ -1,0 +1,19 @@
+<ion-content padding class="bg-choose-checkpoint">
+  <div class="button-back">
+    <a class="btn-back" (click)="goback()">
+      <img src="../../../assets/img/btn/btn-back.png" alt="">
+    </a>
+  </div>
+
+  <div class="icon-quiz">
+    <img (click)="playSpecificSound()" src="{{show.alphabet}}" alt="" srcset="">
+  </div>
+  <ion-row>
+    <ion-col class="speker1">
+      <p> <img (click)="playThaiSound()" src="../../../assets/img/icons-speaker/btn-th-blue.png" alt="" srcset=""></p>
+    </ion-col>
+    <ion-col class="speker2">
+      <p> <img (click)="playEngSound()" src="../../../assets/img/icons-speaker/btn-en-blue.png" alt="" srcset=""></p>
+    </ion-col>
+  </ion-row>
+</ion-content>

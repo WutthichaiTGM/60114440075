@@ -1,0 +1,39 @@
+<ion-content padding class="bg-all-knowledge">
+  <ion-row>
+    <ion-col>
+      <div>
+        <a class="btn-back" (click)="goback()">
+          <img src="../../../assets/img/btn/btn-back.png" alt="">
+        </a>
+      </div>
+    </ion-col>
+
+    <ion-col>
+    </ion-col>
+  
+    <ion-col>
+    </ion-col>
+  </ion-row>
+
+  <div id="container">
+    <ion-row>
+      <ion-col>
+        <a class="btn alphabet" routerLink="/alphabet-category"></a>
+      </ion-col>
+      <ion-col>
+        <a class="btn number" (click)="getTopic('number')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 2%;">
+      <ion-col>
+        <a style="margin-left: 5%;" class="btn" (click)="getTopic('fruit')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+      <ion-col>
+        <a style="margin-left: 9%;" class="btn" (click)="getTopic('vehicle')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+      <ion-col>
+        <a class="btn animal" (click)="getTopic('animal')" routerLink="/choose-knowledge"></a>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

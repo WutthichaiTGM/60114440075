@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true" padding class="bg-home"> 
+  <ion-row style="height: 14%;">
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col> 
+
+    <ion-col style="text-align: right; height: fit-content;">
+      <div *ngIf="!statusSound; else Mute">
+        <a class="btn-sound" (click)="turnOnOffSound()"><img src="../../assets/img/btn/volume.png" alt="" width="45%"></a>
+      </div>
+      <ng-template #Mute>
+        <a class="btn-sound" (click)="turnOnOffSound()"><img src="../../assets/img/btn/mute.png" alt="" width="45%"></a>
+      </ng-template>
+    </ion-col>
+  </ion-row>
+
+  <div id="container">
+    <a class="btn" routerLink="/main-page"></a>
+  </div>
+</ion-content>

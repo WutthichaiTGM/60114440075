@@ -1,0 +1,83 @@
+<ion-content padding class="bg-choose-checkpoint">
+  <ion-row class="header" style="height: 14%;">
+    <ion-col style="height: fit-content;">
+      <a class="btn" (click)="resetGame()"><img src="../../../../assets/img/btn/btn-home.png" alt=""></a>
+    </ion-col>
+
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+
+    <ion-col style="height: fit-content; text-align: right; padding-top: 2%; padding-left: 12%;">
+      <label for="" *ngFor="let h of heart" style="padding: 4%;">
+        <img src="{{ h.img }}" alt="" width="25px">
+      </label>
+    </ion-col> 
+
+    <ion-col style="text-align: right; height: fit-content;">
+      <p class="score">SCORE : {{ score }}</p>
+    </ion-col>
+  </ion-row>
+
+  <div id="container">
+    <ion-row>
+      <ion-col class="col-top" >
+        <h1 style="line-height: 0.1;">เสียงนี้คือ</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col-mid" style="text-align: -webkit-center;">
+        <div class="button-back">
+          <a (click)="listenSound()">
+            <img src="../../../../assets/img/icons-speaker/btn-animal-audio.png" alt="">
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col-buttom" *ngFor="let dev of listen; let j = index;">
+        <div>
+          <a (click)="getAns(j+1)">
+            <img class="img" src="{{ dev.alphabet }}" alt="" width="130px">
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <div id="resetGame" style="text-align: center;">
+      <ion-row>
+        <ion-col style="text-align: right;"><img class="img-fail" src="../../../../assets/img/cry.png" alt=""></ion-col>
+        <ion-col style="text-align: center; margin-top: 7%;">
+          <span class="txt-congrate">แน่ใจหรือว่าต้องการเลิก?</span><br>
+          <label for="">
+            <span><button class="yes" (click)="playBgSound()" routerLink="/choose-checkpoint"><h3><strong>ใช่</strong></h3></button></span>
+            <span style="padding: 5%;"></span>
+            <span><button class="no" (click)="continueGame()"><h3><strong>ไม่</strong></h3></button></span>
+          </label>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div id="successMessage" style="text-align: center;">
+      <ion-row>
+        <ion-col style="text-align: right;"><img class="img-congrate" src="../../../../assets/img/congrate.png" alt=""></ion-col>
+        <ion-col style="text-align: left; margin-top: 20%;">
+          <span class="txt-congrate">สุดยอดไปเลย</span>
+          <button class="home" (click)="gotoCheckpoint()"><ion-icon name="home" style="margin-top: 6%;"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </div>
+  
+    <div id="failMessage" style="text-align: center;">
+      <ion-row>
+        <ion-col style="text-align: right;"><img class="img-fail" src="../../../../assets/img/cry.png" alt=""></ion-col>
+        <ion-col style="text-align: center; margin-top: 7%;">
+          <span class="txt-fail">ไม่ไหวๆ<br>ลองใหม่อีกทีนะ</span><br>
+          <label for="">
+            <span><button class="replay" (click)="getDataQuiz(category)"><ion-icon name="reload" style="margin-top: 6%;"></ion-icon></button></span>
+            <span><button class="home" (click)="fail()"><ion-icon name="home" style="margin-top: 6%;"></ion-icon></button></span>
+          </label>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
